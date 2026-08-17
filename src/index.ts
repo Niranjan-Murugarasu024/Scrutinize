@@ -37,7 +37,20 @@ async function runJob(app: Probot, db: DB, job: Job): Promise<void> {
   }
 }
 
-export default async (app: Probot) => {
+export default async (
+  app: Probot,
+  { getRouter }: { getRouter?: (path?: string) => any } = {}
+) => {
+  if (getRouter) {
+    const router = getRouter();
+    router.get("/", (_req: any, res: any) => {
+      res.status(200).send("Scrutinize GitHub App is active");
+    });
+    router.get("/health", (_req: any, res: any) => {
+      res.status(200).send("OK");
+    });
+  }
+
   const db = await initDb();
 
   // Every handler below does the same thing: verify already happened
