@@ -5,14 +5,14 @@ default_events:
   - pull_request
   - pull_request_review
 name: Scrutinize
-url: https://github.com/YOUR_USERNAME/scrutinize
+url: https://github.com/Niranjan-Murugarasu024/Scrutinize
 hook_attributes:
-  url: https://YOUR_DEPLOYED_URL/api/github/webhooks
-redirect_url: https://YOUR_DEPLOYED_URL/probot/setup
+  url: https://scrutinize.onrender.com/api/github/webhooks
+redirect_url: https://scrutinize.onrender.com/probot/setup
 public: true
 default_permissions:
   checks: write
   pull_requests: read
   contents: read
   metadata: read
-description: Flags pull requests that likely weren't actually reviewed \u2014 deterministic signals, no AI model, fully explainable.
+description: Flags pull requests that likely weren't actually reviewed — deterministic signals, no AI model, fully explainable.
