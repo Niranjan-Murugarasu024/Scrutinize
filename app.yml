@@ -1,0 +1,18 @@
+# GitHub App manifest. Used by Probot's setup flow (`npm run start` on first
+# run walks you through this at http://localhost:3000) to create the App
+# without manually clicking through GitHub's settings UI.
+default_events:
+  - pull_request
+  - pull_request_review
+name: Scrutinize
+url: https://github.com/YOUR_USERNAME/scrutinize
+hook_attributes:
+  url: https://YOUR_DEPLOYED_URL/api/github/webhooks
+redirect_url: https://YOUR_DEPLOYED_URL/probot/setup
+public: true
+default_permissions:
+  checks: write
+  pull_requests: read
+  contents: read
+  metadata: read
+description: Flags pull requests that likely weren't actually reviewed \u2014 deterministic signals, no AI model, fully explainable.

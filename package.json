@@ -1,0 +1,27 @@
+{
+  "name": "scrutinize",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Review-process health auditor for GitHub. Flags pull requests that likely weren't actually reviewed, using deterministic signals — no AI model required.",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "probot run ./lib/index.js",
+    "dev": "npm run build && npm run start",
+    "test": "npm run build && node --test lib/*.test.js"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.17.4",
+    "better-sqlite3": "^11.0.0",
+    "probot": "^14.3.2"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

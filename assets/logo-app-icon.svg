@@ -1,0 +1,9 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <title>Scrutinize</title>
+  <rect x="0" y="0" width="200" height="200" rx="40" fill="#F8FAFC"/>
+  <g transform="translate(13.5,13.5)">
+    <circle cx="82" cy="82" r="52" fill="none" stroke="#1E293B" stroke-width="16"/>
+    <line x1="119" y1="119" x2="151" y2="151" stroke="#1E293B" stroke-width="16" stroke-linecap="round"/>
+    <path d="M62,82 L76,98 L106,60" fill="none" stroke="#0D9488" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

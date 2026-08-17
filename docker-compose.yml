@@ -1,0 +1,17 @@
+services:
+  scrutinize:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - APP_ID=${APP_ID}
+      - PRIVATE_KEY_PATH=/app/secrets/private-key.pem
+      - WEBHOOK_SECRET=${WEBHOOK_SECRET}
+      - DATABASE_PATH=/app/data/scrutinize.db
+      - TURSO_DATABASE_URL=${TURSO_DATABASE_URL}
+      - TURSO_AUTH_TOKEN=${TURSO_AUTH_TOKEN}
+      - NODE_ENV=production
+    volumes:
+      - ./data:/app/data
+      - ./secrets:/app/secrets:ro
+    restart: unless-stopped
